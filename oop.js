@@ -91,5 +91,37 @@ p333.sayHello();
 p444.sayHello();
 p555.sayHello();
 
+//Start of Part 2
+
+class Vehicle {
+    constructor(manufacturer, numofwheels){
+        this.manufacturer = manufacturer;
+        this.numofwheels = numofwheels;
+    }
+
+    aboutVehicle() {
+        console.log(`This is a Vehicle, it was made by ${this.manufacturer} and it ${this.numofwheels} wheels.`);
+    }
+}
+
+class Truck extends Vehicle {
+    constructor(manufacturer, numofwheels, doors, hastruckbed){
+        super(manufacturer, numofwheels);
+        this.doors = doors;
+        this.hastruckbed = hastruckbed;
+    }
+}
+
+class Sedan extends Vehicle {
+    constructor(manufacturer, numofwheels, size, mpg){
+        super(manufacturer, numofwheels);
+        this.size = size;
+        this.mpg = mpg;
+    }
+}
+
+let newcar = new Sedan('Ford', 4, 'medium', 30);
+
+console.log(newcar.numofwheels);
 
 
