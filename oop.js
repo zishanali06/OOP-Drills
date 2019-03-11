@@ -118,10 +118,22 @@ class Sedan extends Vehicle {
         this.size = size;
         this.mpg = mpg;
     }
+    aboutVehicle() {
+        console.log(`This is a Vehicle, it was made by ${this.manufacturer} and it ${this.numofwheels} wheels. This is a ${this.size} car that does ${this.mpg} mpg!`);
+    }
+}
+
+class Motorcycle extends Vehicle {
+    constructor(manufacturer, numofwheels, stering, nodoors){
+        super(manufacturer, numofwheels);
+        this.stering = stering;
+        this.nodoors = nodoors;
+    }
 }
 
 let newcar = new Sedan('Ford', 4, 'medium', 30);
 
 console.log(newcar.numofwheels);
+newcar.aboutVehicle();
 
 
