@@ -1,31 +1,34 @@
+
+//BELOW IS OBJECT LITERALS
+//object literal 1
 let person1 = {
     name: 'Zishan',
     sayHello: function () {
         console.log(`Hello! My name is ${this.name}.`);
     }
 };
-
+//object literal 2
 let person2 = {
     name: 'Ashley',
     sayHello: function () {
         console.log(`Hello! My name is ${this.name}.`);
     }
 };
-
+//object literal 3
 let person3 = {
     name: 'Fehzan',
     sayHello: function () {
         console.log(`Hello! My name is ${this.name}.`);
     }
 };
-
+//object literal 4
 let person4 = {
     name: 'James',
     sayHello: function () {
         console.log(`Hello! My name is ${this.name}.`);
     }
 };
-
+//object literal 5
 let person5 = {
     name: 'Starla',
     sayHello: function () {
@@ -33,6 +36,7 @@ let person5 = {
     }
 };
 
+//This IS USING PSEUDO CLASSES and METHODS TO DO SAME AS ABOVE
 person1.sayHello();
 person2.sayHello();
 person3.sayHello();
@@ -60,4 +64,32 @@ p22.sayHey();
 p33.sayHey();
 p44.sayHey();
 p55.sayHey();
+
+//THIS IS SETTING UP SAME AS BOTH CODES ABOVE BUT IN ES6
+//****EASIEST WAY!!!***
+class Nperson {
+    constructor(name, age, city) {
+        this.name = name;
+        this.age = age;
+        this.city = city;
+    };
+
+    sayHello() {
+        console.log(`Test 2: Hey! My name is ${this.name} I am ${this.age} years old and live in ${this.city}`);
+    };
+};
+
+let p111 = new Nperson ('Zishan', 'Chicago', '29');
+let p222 = new Nperson ('Ashley', 'Dallas', '28');
+let p333 = new Nperson ('Fehzan', 'Boston', '29');
+let p444 = new Nperson ('Starla', 'Addison', '2');
+let p555 = new Nperson ('James', 'Chicago', '101');
+
+p111.sayHello();
+p222.sayHello();
+p333.sayHello();
+p444.sayHello();
+p555.sayHello();
+
+
 
