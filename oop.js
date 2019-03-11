@@ -104,8 +104,11 @@ class Vehicle {
     }
 }
 
+//This class inherits from the Vehicle Class
 class Truck extends Vehicle {
+    //CAN HAVE VARIABLES FROM PARENT AS WELL AS NEW ONES TO EXTEND TO IN THIS CONSTRUCTOR
     constructor(manufacturer, numofwheels, doors, hastruckbed){
+        //SUPER IS USED TO CONTRUCT FROM PARENT CLASS
         super(manufacturer, numofwheels);
         this.doors = doors;
         this.hastruckbed = hastruckbed;
@@ -133,6 +136,7 @@ class Motorcycle extends Vehicle {
 
 let newcar = new Sedan('Ford', 4, 'medium', 30);
 
+//calling new class made above
 console.log(newcar.numofwheels);
 newcar.aboutVehicle();
 
